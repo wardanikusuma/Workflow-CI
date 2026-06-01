@@ -1,0 +1,6 @@
+name: Telco_Customer_Churn_Retraining
+
+entry_points:
+  main:
+    parameters: {}
+    command: ["python", "modelling.py"]
