@@ -24,7 +24,7 @@ mlflow.set_experiment("Telco_Customer_Churn_Modelling")
 mlflow.autolog()
 
 # 3. Memuat Data Bersih Hasil Preprocessing Kriteria 1
-data_path = "telco_customer_customer_preprocessing/data_clean.csv"
+data_path = "telco_customer_preprocessing/data_clean.csv"
 if not os.path.exists(data_path):
     raise FileNotFoundError(f"Dataset bersih tidak ditemukan di {data_path}. Pastikan Kriteria 1 sudah dijalankan!")
 
