@@ -14,8 +14,8 @@ print("Memulai eksperimen pelacakan model dengan MLflow & DagsHub...")
 REPO_OWNER = "wardanikusuma"
 REPO_NAME = "Eksperimen_SML_Tia-Kusuma-Wardani"
 
-dagshub.init(repo_owner=REPO_OWNER, repo_name=REPO_NAME, mlflow=True)
-mlflow.set_tracking_uri(f"https://dagshub.com/{REPO_OWNER}/{REPO_NAME}.mlflow")
+#dagshub.init(repo_owner=REPO_OWNER, repo_name=REPO_NAME, mlflow=True)
+#mlflow.set_tracking_uri(f"https://dagshub.com/{REPO_OWNER}/{REPO_NAME}.mlflow")
 
 # 2. Set Nama Eksperimen di MLflow
 mlflow.set_experiment("Telco_Customer_Churn_Modelling")
@@ -24,8 +24,7 @@ mlflow.set_experiment("Telco_Customer_Churn_Modelling")
 mlflow.autolog()
 
 # 3. Memuat Data Bersih Hasil Preprocessing Kriteria 1
-data_path = "../Eksperimen_SML_Tia-Kusuma-Wardani/preprocessing/telco_customer_churn_preprocessing/data_clean.csv"
-
+data_path = "telco_customer_customer_preprocessing/data_clean.csv"
 if not os.path.exists(data_path):
     raise FileNotFoundError(f"Dataset bersih tidak ditemukan di {data_path}. Pastikan Kriteria 1 sudah dijalankan!")
 
